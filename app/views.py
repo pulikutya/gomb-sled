@@ -11,6 +11,7 @@ def led1(request):
         GPIO.output(17,GPIO.HIGH)
     elif request.POST["state"] == "off":
         GPIO.output(17,GPIO.LOW)
+    print(request.POST["state"])
 
 def led0(request):
     return render(request,"led.html",{})
