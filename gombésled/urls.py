@@ -20,6 +20,6 @@ from app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('led-post/',views.ledpost),
+    path('led/<int:state>/',views.ledset),
     path('led/',views.led0),
 ]

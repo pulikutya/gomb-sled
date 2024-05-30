@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <scrpit>
+        function ledon() {
+            fetch("/led/" + 1)
+        }
+        function ledoff() {
+            fetch("/led/" + 0)
+        }
+    </scrpit>
 </head>
 <body>
-    <form action="/led-post" method="post">
-        <input type="checkbox", value="state", name="state", id="state">
-    </form>
+   <button onclick="ledon">on</button>
+   <button onclick="ledoff">off</button>
 </body>
 </html>

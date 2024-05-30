@@ -7,12 +7,11 @@ def setup():
     GPIO.setup(17,GPIO.OUT)
 # Create your views here.
 
-def ledpost(request):
-    if request.POST["state"] == "on":
+def ledset(request,state):
+    if state:
         GPIO.output(17,GPIO.HIGH)
-    elif request.POST["state"] == "off":
+    else:
         GPIO.output(17,GPIO.LOW)
-    print(request.POST["state"])
     return JsonResponse({'üres':'a pride ot be kell tiltani'})
 
 def led0(request):
