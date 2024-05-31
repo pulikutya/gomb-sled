@@ -5,6 +5,7 @@ from django.http import JsonResponse
 def setup():
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(17,GPIO.OUT)
+setup()
 # Create your views here.
 
 def ledset(request,state):

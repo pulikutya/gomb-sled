@@ -6,15 +6,15 @@
     <title>Document</title>
     <script>
         function ledon() {
-            fetch("/led/" + 1)
+            fetch("/led/" + 1).then(r=>console.log(r))
         }
         function ledoff() {
-            fetch("/led/" + 0)
+            fetch("/led/" + 0).then(r=>console.log(r))
         }
     </script>
 </head>
 <body>
-   <button onclick="ledon">on</button>
-   <button onclick="ledoff">off</button>
+   <button onclick="ledon()">on</button>
+   <button onclick="ledoff()">off</button>
 </body>
 </html>
